@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:id="@+id/container_root"
+    tools:context=".MainActivity">
+
+    <com.cqz.app.view.PullToRefreshLayout
+        android:id="@+id/ptrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CC209C"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                >
+            <TextView android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="16dp"
+                />
+            <ImageView android:id="@+id/iv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/refreshing"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_status"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                />
+                <ImageView android:id="@+id/iv_pull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pull_down"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_status"
+                    android:layout_marginRight="8dp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ListView android:id="@+id/lv_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </com.cqz.app.view.PullToRefreshLayout>
+</RelativeLayout>
